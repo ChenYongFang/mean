@@ -13,10 +13,10 @@
     padding: 15px;
 }
 .text-small {
-    font-size:12px
+    font-size:12px;
 }
 .text-normal {
-    font-size:14px
+    font-size:14px;
 }
 .cursor-auto{
     cursor: auto;
@@ -189,7 +189,7 @@ body{
     box-shadow: 0 0 2px rgba(0,0,0,.2);
 }
 /* aside navigation css definition */
-.main-container .nav-container{
+.nav-container{
     width: 220px;
     float: left;
     z-index: 11;
@@ -197,7 +197,7 @@ body{
     border: solid #1b1a1f;
     border-width: 0 1px 0 0;
 }
-.main-container .nav-container:before{
+.nav-container:before{
     top: 0;
     bottom: 0;
     z-index: -1;
@@ -208,6 +208,55 @@ body{
     position: absolute;
     background-color: inherit;
 }
+.nav-container.nav-fixed{
+    top: 120px;
+    bottom: 0;
+    float: none;
+    position: fixed;
+}
+.nav-container ul{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.nav-container a{
+    color: #767676;
+    font-size: 13px;
+}
+.nav-container a:hover{
+    text-decoration: none;
+}
+.nav-container a .badge{
+    top: 16px;
+    right: 5px;
+    position: absolute;
+}
+.nav-container a > i{
+    width:20px;
+    font-size: 16px;
+    margin-right: 10px;
+    text-align: center;
+}
+.nav-container li{
+    text-align:left;
+    font-weight:700;
+    position:relative;
+    -webkit-transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out
+}
+.nav-container li > a{
+    padding: 15px;
+    display: block;
+    position: relative;
+}
+.main-container .nav-vertical li{
+    border-bottom: 1px solid rgba(255,255,255,.05);
+}
+.nav-container li.active a,.nav-container a:hover{
+    color: #fafafa;
+    background-color: #28262c;
+}
 .main-container .content-container{
     min-height: 100%;
     overflow: hidden;
@@ -215,6 +264,9 @@ body{
 @media (min-width: 768px) {
     .main-container{
         padding-top: 60px;
+    }
+    .main-container .nav-container.nav-fixed{
+        top: 60px;
     }
     .main-container .content-container{
         margin-left: 220px;
