@@ -12,7 +12,7 @@
 <div class="top-nav">
     <!-- left navigation -->
     <ul class="nav-left list-unstyled">
-        <li class="hidden-xs">
+        <li class="hidden-xs" ng-click="$parent.navCollapsedMin = !navCollapsedMin">
             <i class="fa fa-bars"></i>
         </li>
         <li class="hidden-xs">
@@ -23,7 +23,7 @@
                 <span class="input-group-addon">
                     <i class="fa fa-search text-muted"></i>
                 </span>
-                <input type="text" class="form-control" placeholder="Search...">
+                <input type="text" class="form-control" placeholder="关键字查找...">
             </div>
         </li>
         <li>

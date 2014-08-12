@@ -265,6 +265,15 @@ body{
     .main-container{
         padding-top: 60px;
     }
+    .nav-container.nav-collapsed-min{
+        width: 60px;
+    }
+    .nav-container.nav-collapsed-min li > a > span{
+        display: none;
+    }
+    .nav-container.nav-collapsed-min a > i{
+        font-size: 20px;
+    }
     .main-container .nav-container.nav-fixed{
         top: 60px;
     }

@@ -42,11 +42,11 @@
 	<![endif]-->
 </head>
 
-<body class="ng-cloak">
+<body class="ng-cloak" ng-controller="AppController">
 	<header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar-fixed-top header-container"></header>
 	<!-- main contents -->
     <div class="main-container">
-        <aside ng-include="'/modules/core/views/nav.client.view.html'" class="nav-container nav-fixed nav-vertical"></aside>
+        <aside ng-controller="LeftNavController" ng-class="{'nav-collapsed-min':navCollapsedMin}" ng-include="'/modules/core/views/nav.client.view.html'" class="nav-container nav-fixed nav-vertical"></aside>
         {% block content %}{% endblock %}
     </div>
 
