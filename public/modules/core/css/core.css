@@ -164,6 +164,7 @@ body{
 @media (min-width: 768px){
     .header-container .logo{
         width: 220px;
+        border-right: 1px solid rgba(255,255,255,.1);
     }
     .header-container .top-nav{
         padding: 0 0 0 220px;
@@ -193,6 +194,7 @@ body{
     width: 220px;
     float: left;
     z-index: 11;
+    display: none;
     background: #34323a;
     border: solid #1b1a1f;
     border-width: 0 1px 0 0;
@@ -264,17 +266,25 @@ body{
     min-height: 100%;
     overflow: hidden;
 }
+@media (max-width: 768px){
+    .on-canvas .nav-container{
+        display: block;
+    }
+}
 @media (min-width: 768px) {
     .main-container{
         padding-top: 60px;
     }
-    .nav-container.nav-collapsed-min{
+    .main-container .nav-container{
+        display: block;
+    }
+    .nav-collapsed-min .nav-container{
         width: 60px;
     }
-    .nav-container.nav-collapsed-min li > a > span{
+    .nav-collapsed-min .nav-container li > a > span{
         display: none;
     }
-    .nav-container.nav-collapsed-min a > i{
+    .nav-collapsed-min .nav-container a > i{
         font-size: 20px;
     }
     .main-container .nav-container.nav-fixed{
@@ -282,5 +292,8 @@ body{
     }
     .main-container .content-container{
         margin-left: 220px;
+    }
+    .nav-collapsed-min .content-container{
+        margin-left: 60px;
     }
 }
